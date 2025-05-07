@@ -1,0 +1,220 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.btn-purple {
+  background-color: #6b5de2 !important;
+}
+
+.btn-purple:disabled {
+  cursor: default;
+  pointer-events: none;
+  color: var(--mdc-filled-button-disabled-label-text-color,
+    color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent));
+  background-color: #ddd !important;
+}
+
+
+.mat-mdc-card-header {
+  padding: 16px 16px 16px !important;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+/* Global Grid System */
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 15px;
+}
+
+/* Responsive Column Utilities */
+.grid-cols-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-cols-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.grid-cols-6 {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+@media (max-width: 1024px) {
+  .md\\:grid-cols-1 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .md\\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .md\\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .sm\\:grid-cols-1 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .sm\\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* === Widget Card Styles === */
+.widget-card {
+  background: #03a9f429;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease-in-out;
+  text-align: center;
+  cursor: pointer;
+}
+
+.widget-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Example heading and value styles */
+.widget-icon {
+  margin: 0 auto 1rem auto;
+  /* center horizontally & add bottom space */
+  height: 50px;
+  width: 50px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.widget-icon img {
+  height: 28px;
+  width: 28px;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(39%) sepia(92%) saturate(1477%) hue-rotate(180deg) brightness(95%) contrast(92%);
+}
+
+.widget-title {
+  font-size: 1rem;
+  color: #2196f3;
+  margin-bottom: 0.5rem;
+}
+
+.widget-value {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #2196f3;
+}
+
+/* Blue Widget */
+.widget-blue {
+  background: #03a9f429;
+}
+
+.widget-blue .widget-title,
+.widget-blue .widget-value {
+  color: #2196f3;
+}
+
+/* Green Widget */
+.widget-green {
+  background: #4caf5029;
+}
+
+.widget-green .widget-title,
+.widget-green .widget-value {
+  color: #4caf50;
+}
+
+/* Orange Widget */
+.widget-orange {
+  background: #ff980029;
+}
+
+.widget-orange .widget-title,
+.widget-orange .widget-value {
+  color: #ff9800;
+}
+
+/* Red Widget */
+.widget-red {
+  background: #f4433629;
+}
+
+.widget-red .widget-title,
+.widget-red .widget-value {
+  color: #f44336;
+}
+
+/* Purple Widget */
+.widget-purple {
+  background: #9c27b029;
+}
+
+.widget-purple .widget-title,
+.widget-purple .widget-value {
+  color: #9c27b0;
+}
+
+/* Teal Widget */
+.widget-teal {
+  background: #00968829;
+}
+
+.widget-teal .widget-title,
+.widget-teal .widget-value {
+  color: #009688;
+}
+
+.widget-blue .widget-icon {
+  background-color: rgba(33, 150, 243, 0.15);
+}
+
+.widget-green .widget-icon {
+  background-color: rgba(76, 175, 80, 0.15);
+}
+
+.widget-orange .widget-icon {
+  background-color: rgba(255, 152, 0, 0.15);
+}
+
+.widget-red .widget-icon {
+  background-color: rgba(244, 67, 54, 0.15);
+}
+
+.widget-teal .widget-icon {
+  background-color: rgba(0, 150, 136, 0.15);
+}

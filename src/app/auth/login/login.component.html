@@ -1,0 +1,61 @@
+<mat-grid-list cols="2" rowHeight="100%">
+  <mat-grid-tile>
+    <img src="/img/login.png" class="login-bg" alt="Login Image" />
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-card appearance="outlined">
+      <mat-card-header>
+        <mat-card-title> Login</mat-card-title>
+      </mat-card-header>
+      <form class="example-form" [formGroup]="loginFrm" (ngSubmit)="onLogin()">
+        <mat-card-content>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Email:</mat-label>
+            <input matInput placeholder="john@gmail.com" formControlName="email" required/>
+            <mat-error *ngIf="loginFrm.get('email')?.hasError('required')">
+              Email is required
+            </mat-error>
+            <mat-error *ngIf="loginFrm.get('email')?.hasError('email')">
+              Enter a valid email
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Password:</mat-label>
+            <input matInput placeholder="123@abc" [type]="hide ? 'password' : 'text'" formControlName="password" required/>
+            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+
+            <mat-error *ngIf="loginFrm.get('password')?.hasError('required')">
+              Password is required
+            </mat-error>
+          </mat-form-field>
+
+          <section class="example-section">
+            <mat-checkbox class="example-margin" formControlName="isRemember">Remember me!</mat-checkbox>
+          </section>
+        </mat-card-content>
+
+        <mat-card-actions align="end">
+          <button type="submit" mat-flat-button [disabled]="loginFrm.invalid || isLoading">
+            <ng-container *ngIf="!isLoading; else loading">
+              Login
+            </ng-container>
+            <ng-template #loading>
+              <mat-progress-spinner
+                diameter="24"
+                mode="indeterminate"
+                color="accent"
+                style="width: 24px; height: 24px;"
+                strokeWidth="3">
+              </mat-progress-spinner>
+            </ng-template>
+          </button>
+
+          <!-- <button type="button" mat-flat-button routerLink="/dashboard">Login</button> -->
+          <button type="button" mat-button routerLink="/signup">Signup</button>
+        </mat-card-actions>
+      </form>
+    </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>

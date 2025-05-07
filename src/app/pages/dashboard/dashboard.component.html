@@ -1,0 +1,60 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <h4>Dashboard</h4>
+    </div>
+  </div>
+</div>
+<div class="grid grid-cols-6 md:grid-cols-3 sm:grid-cols-1">
+  <div class="widget-card widget-blue">
+    <div class="widget-icon"><img src="/img/user.svg"></div>
+    <div class="widget-title">Employees</div>
+    <div class="widget-value">1,230</div>
+  </div>
+
+  <div class="widget-card widget-green">
+    <div class="widget-icon"><img src="/img/user.svg"></div>
+    <div class="widget-title">Employees</div>
+    <div class="widget-value">1,230</div>
+  </div>
+
+  <div class="widget-card widget-orange">
+    <div class="widget-icon"><img src="/img/user.svg"></div>
+    <div class="widget-title">Employees</div>
+    <div class="widget-value">1,230</div>
+  </div>
+
+  <div class="widget-card widget-red">
+    <div class="widget-icon"><img src="/img/user.svg"></div>
+    <div class="widget-title">Employees</div>
+    <div class="widget-value">1,230</div>
+  </div>
+
+  <div class="widget-card widget-purple">
+    <div class="widget-icon"><img src="/img/user.svg"></div>
+    <div class="widget-title">Employees</div>
+    <div class="widget-value">1,230</div>
+  </div>
+
+  <div class="widget-card widget-teal">
+    <div class="widget-icon"><img src="/img/user.svg"></div>
+    <div class="widget-title">Employees</div>
+    <div class="widget-value">1,230</div>
+  </div>
+
+</div>
+
+<div class="grid grid-cols-2 md:grid-cols-3 sm:grid-cols-1">
+  <mat-card appearance="outlined">
+    <mat-card-content>
+      <canvasjs-chart [options]="multiSeriesChart" [styles]="{width: '100%', height:'360px'}"></canvasjs-chart>
+    </mat-card-content>
+  </mat-card>
+  <mat-card appearance="outlined">
+    <mat-card-content>
+      <canvasjs-chart [options]="chartOptions" style="overflow: -webkit-paged-x;"></canvasjs-chart>
+    </mat-card-content>
+  </mat-card>
+
+
+</div>

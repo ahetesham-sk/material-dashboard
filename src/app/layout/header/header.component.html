@@ -1,0 +1,22 @@
+<mat-toolbar color="primary" class="header">
+  <button mat-icon-button (click)="toggleSidenav.emit()">
+    <mat-icon class="text-white">menu</mat-icon>
+  </button>
+  <span>My App</span>
+
+  <span class="example-spacer"></span>
+
+
+  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon matBadge="15" matBadgeSize="large" class="text-white">notifications</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon"
+    [matMenuTriggerFor]="menu">
+    <mat-icon class="text-white">person_outline</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>Settings</button>
+    <button mat-menu-item>Logout</button>
+  </mat-menu>
+
+</mat-toolbar>

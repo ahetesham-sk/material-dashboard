@@ -1,0 +1,44 @@
+<mat-nav-list>
+  <div class="logo">
+    <img src="/img/dark-logo.svg" alt="Logo" />
+  </div>
+  <!-- <mat-divider></mat-divider> -->
+  <div class="parent">
+    <div class="menus">
+      <a mat-list-item routerLink="/dashboard" routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{ exact: true }">
+          <div class="menu-item">
+            <mat-icon>home</mat-icon>
+            Dashboard
+          </div>
+      </a>
+
+      <a mat-list-item routerLink="/users" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">
+        <div class="menu-item">
+          <mat-icon>people</mat-icon>
+        Users
+        </div>
+      </a>
+
+      <a mat-list-item routerLink="/settings" routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{ exact: true }">
+        <div class="menu-item">
+          <mat-icon>settings</mat-icon>
+        Settings
+        </div>
+      </a>
+
+      <a mat-list-item routerLink="/login" routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{ exact: true }">
+        <div class="menu-item">
+          <mat-icon>logout</mat-icon>
+        Logout
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+
+
+</mat-nav-list>
