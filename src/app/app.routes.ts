@@ -5,6 +5,7 @@ import { MainLayoutComponent } from './layout/main-layout/main-layout.component'
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { UsersComponent } from './pages/users/users.component';
 import { UserFormComponent } from './components/users/user-form/user-form.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -18,6 +19,7 @@ export const routes: Routes = [
       { path: 'users', component: UsersComponent, title: 'Users' },
       { path: 'users/add', component: UserFormComponent },
       { path: 'users/edit/:id', component: UserFormComponent },
+      { path: 'profile', component: ProfileComponent, title: 'Profile' },
       // Add more routes here as needed
     ]
   }

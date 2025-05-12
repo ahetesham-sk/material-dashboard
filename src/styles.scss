@@ -235,3 +235,10 @@ body {
   }
 }
 
+.img-rounded{
+  border: 50%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  margin: 0 auto;
+}

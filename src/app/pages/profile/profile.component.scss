@@ -1,0 +1,23 @@
+.profile-card{
+  background: rgba(3, 169, 244, 0.1607843137);
+  color: #2196f3;
+  border: 0.5px solid #2196f3;
+}
+// .profile-img{
+//  background: #03a9f429;
+// }
+.card-subtitle{
+  color: #607d8b !important;
+}
+.info-list{
+  display: flex;
+  align-items: center;
+}
+.info-icon{
+  margin-right: 8px;
+}
+.social-icons{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
