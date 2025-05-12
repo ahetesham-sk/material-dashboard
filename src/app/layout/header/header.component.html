@@ -10,11 +10,21 @@
   <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
     <mat-icon matBadge="15" matBadgeSize="large" class="text-white">notifications</mat-icon>
   </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon"
+  <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon"
     [matMenuTriggerFor]="menu">
     <mat-icon class="text-white">person_outline</mat-icon>
+  </button> -->
+
+   <!-- Profile Image -->
+  <button mat-button class="profile-button" [matMenuTriggerFor]="menu">
+    <img src="/img/avatar.jpg" alt="Profile" class="profile-image" />
   </button>
+
   <mat-menu #menu="matMenu">
+    <div class="user-name" mat-menu-item>
+    {{ userName }}
+  </div>
+  <mat-divider></mat-divider>
     <button mat-menu-item>Settings</button>
     <button mat-menu-item>Logout</button>
   </mat-menu>

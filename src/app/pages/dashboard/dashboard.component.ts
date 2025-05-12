@@ -17,7 +17,7 @@ export class DashboardComponent implements OnInit {
   constructor(private conffeti: ConfettiService){}
 
   ngOnInit() {
-   this.conffeti.launchRainfall();
+   this.conffeti.firework();
   }
 
 	multiSeriesChart = {

@@ -218,3 +218,20 @@ body {
 .widget-teal .widget-icon {
   background-color: rgba(0, 150, 136, 0.15);
 }
+
+/* styles.css or styles.scss */
+/* Add this to your global styles.css or styles.scss */
+.mat-mdc-snack-bar-container {
+  &.toast-success {
+    --mdc-snackbar-container-color: #4caf50;
+    --mat-mdc-snack-bar-button-color: #fff;
+    --mdc-snackbar-supporting-text-color: #fff;
+  }
+
+  &.toast-error {
+    --mdc-snackbar-container-color: #f44336;
+    --mat-mdc-snack-bar-button-color: #fff;
+    --mdc-snackbar-supporting-text-color: #fff;
+  }
+}
+

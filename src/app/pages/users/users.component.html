@@ -1,3 +1,21 @@
-<p>users works!</p>
-<button mat-flat-button (click)="showLoader()">Start Loader</button>
-<button mat-button (click)="hideLoader()">Stop Loader</button>
+<div class="container-fluid py-2">
+  <div class="row">
+    <div class="col-10">
+      <h4>Manage Users</h4>
+    </div>
+    <div class="col-2 text-end">
+      <button mat-flat-button color="primary" routerLink="/users/add">
+        <mat-icon>add</mat-icon>
+        Add User
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 col-md-12">
+      <app-user-list></app-user-list>
+    </div>
+  </div>
+</div>

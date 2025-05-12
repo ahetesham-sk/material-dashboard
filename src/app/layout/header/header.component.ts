@@ -11,4 +11,5 @@ import { MATERIAL_MODULES } from '../../shared/material/material';
 })
 export class HeaderComponent {
   @Output() toggleSidenav = new EventEmitter<void>();
+  userName = 'Ahetesham Shaikh';
 }

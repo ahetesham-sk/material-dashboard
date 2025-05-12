@@ -1,0 +1,39 @@
+<h2 mat-dialog-title>User Details</h2>
+
+<mat-dialog-content class="mat-typography">
+  <mat-card appearance="outlined">
+    <mat-card-content>
+      <h4>Basic Info</h4>
+      <p><strong>ID:</strong> {{ data.id }}</p>
+      <p><strong>Name:</strong> {{ data.name }}</p>
+      <p><strong>Username:</strong> {{ data.username }}</p>
+      <p><strong>Email:</strong> {{ data.email }}</p>
+      <p><strong>Phone:</strong> {{ data.phone }}</p>
+      <p><strong>Website:</strong> {{ data.website }}</p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card appearance="outlined" class="mt-3">
+    <mat-card-content>
+      <h4>Address</h4>
+      <p><strong>Street:</strong> {{ data.address?.street }}</p>
+      <p><strong>Suite:</strong> {{ data.address?.suite }}</p>
+      <p><strong>City:</strong> {{ data.address?.city }}</p>
+      <p><strong>Zipcode:</strong> {{ data.address?.zipcode }}</p>
+      <p><strong>Geo:</strong> Lat: {{ data.address?.geo?.lat }}, Lng: {{ data.address?.geo?.lng }}</p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card appearance="outlined" class="mt-3">
+    <mat-card-content>
+      <h4>Company</h4>
+      <p><strong>Name:</strong> {{ data.company?.name }}</p>
+      <p><strong>Catch Phrase:</strong> {{ data.company?.catchPhrase }}</p>
+      <p><strong>BS:</strong> {{ data.company?.bs }}</p>
+    </mat-card-content>
+  </mat-card>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end" class="mt-3">
+  <button mat-stroked-button color="primary" mat-dialog-close>Close</button>
+</mat-dialog-actions>

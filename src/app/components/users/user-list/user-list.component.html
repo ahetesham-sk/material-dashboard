@@ -1,0 +1,73 @@
+<mat-card appearance="outlined">
+  <mat-card-content>
+    <div class="mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource">
+
+        <!-- id Column -->
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> No. </th>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+        <!-- username Column -->
+        <ng-container matColumnDef="username">
+          <th mat-header-cell *matHeaderCellDef> Username </th>
+          <td mat-cell *matCellDef="let element"> {{element.username}} </td>
+        </ng-container>
+
+        <!-- email Column -->
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef> Email </th>
+          <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+        </ng-container>
+
+        <!-- phone Column -->
+        <!-- <ng-container matColumnDef="phone">
+                <th mat-header-cell *matHeaderCellDef> Phone </th>
+                <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
+              </ng-container> -->
+
+        <!-- website Column -->
+        <ng-container matColumnDef="website">
+          <th mat-header-cell *matHeaderCellDef> Website </th>
+          <td mat-cell *matCellDef="let element"> {{element.website}} </td>
+        </ng-container>
+
+        <!-- company Column -->
+        <ng-container matColumnDef="company">
+          <th mat-header-cell *matHeaderCellDef> Company </th>
+          <td mat-cell *matCellDef="let element"> {{element.company.name}} </td>
+        </ng-container>
+
+        <!-- Action Column -->
+        <ng-container matColumnDef="action">
+          <th mat-header-cell *matHeaderCellDef> Actions </th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-icon-button color="primary" class="text-success" (click)="onView(element)">
+              <mat-icon>visibility</mat-icon>
+            </button>
+            <button mat-icon-button color="accent" class="text-primary" (click)="onEdit(element)">
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button color="warn" class="text-danger" (click)="onDelete(element)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select page of periodic elements">
+      </mat-paginator>
+    </div>
+
+  </mat-card-content>
+</mat-card>
