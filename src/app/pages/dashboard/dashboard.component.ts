@@ -3,21 +3,26 @@ import { MATERIAL_MODULES } from '../../shared/material/material';
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 import confetti from 'canvas-confetti';
 import { ConfettiService } from '../../core/services/confetti.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [MATERIAL_MODULES, CanvasJSAngularChartsModule],
+  imports: [MATERIAL_MODULES, CanvasJSAngularChartsModule, CommonModule],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })
 export class DashboardComponent implements OnInit {
   title = 'angular17ssrapp';
 	chart: any;
+  showChart:boolean = false;
 
   constructor(private conffeti: ConfettiService){}
 
   ngOnInit() {
    this.conffeti.firework();
+   setTimeout(() => {
+    this.showChart = true;
+   }, 500);
   }
 
 	multiSeriesChart = {

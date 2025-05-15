@@ -1,60 +1,68 @@
-<div class="container-fluid py-2">
+<div class="container-fluid">
   <div class="row">
-    <div class="col-12">
+    <div class="col-md-12">
       <h4>Dashboard</h4>
     </div>
   </div>
 </div>
-<div class="grid grid-cols-6 md:grid-cols-3 sm:grid-cols-1">
-  <div class="widget-card widget-blue">
-    <div class="widget-icon"><img src="/img/user.svg"></div>
-    <div class="widget-title">Employees</div>
-    <div class="widget-value">1,230</div>
-  </div>
+<!-- Material Cards -->
+<div class="dashboard-container">
+  <mat-card class="dashboard-card card-primary">
+    <div class="card-content">
+      <div>
+        <h3>Users</h3>
+        <p>1,234</p>
+      </div>
+      <mat-icon class="card-icon">groups</mat-icon>
+    </div>
+  </mat-card>
 
-  <div class="widget-card widget-green">
-    <div class="widget-icon"><img src="/img/user.svg"></div>
-    <div class="widget-title">Employees</div>
-    <div class="widget-value">1,230</div>
-  </div>
+  <mat-card class="dashboard-card card-success">
+    <div class="card-content">
+      <div>
+        <h3>Orders</h3>
+        <p>567</p>
+      </div>
+      <mat-icon class="card-icon">shopping_cart</mat-icon>
+    </div>
+  </mat-card>
 
-  <div class="widget-card widget-orange">
-    <div class="widget-icon"><img src="/img/user.svg"></div>
-    <div class="widget-title">Employees</div>
-    <div class="widget-value">1,230</div>
-  </div>
+  <mat-card class="dashboard-card card-warning">
+    <div class="card-content">
+      <div>
+        <h3>Revenue</h3>
+        <p>$12.5k</p>
+      </div>
+      <mat-icon class="card-icon">attach_money</mat-icon>
+    </div>
+  </mat-card>
 
-  <div class="widget-card widget-red">
-    <div class="widget-icon"><img src="/img/user.svg"></div>
-    <div class="widget-title">Employees</div>
-    <div class="widget-value">1,230</div>
-  </div>
-
-  <div class="widget-card widget-purple">
-    <div class="widget-icon"><img src="/img/user.svg"></div>
-    <div class="widget-title">Employees</div>
-    <div class="widget-value">1,230</div>
-  </div>
-
-  <div class="widget-card widget-teal">
-    <div class="widget-icon"><img src="/img/user.svg"></div>
-    <div class="widget-title">Employees</div>
-    <div class="widget-value">1,230</div>
-  </div>
-
+  <mat-card class="dashboard-card card-danger">
+    <div class="card-content">
+      <div>
+        <h3>Visits</h3>
+        <p>8,765</p>
+      </div>
+      <mat-icon class="card-icon">bar_chart</mat-icon>
+    </div>
+  </mat-card>
 </div>
 
-<div class="grid grid-cols-2 md:grid-cols-3 sm:grid-cols-1">
-  <mat-card appearance="outlined">
+<div class="container-fluid" *ngIf="showChart">
+  <div class="row">
+    <div class="col-md-6">
+        <mat-card appearance="outlined">
     <mat-card-content>
-      <canvasjs-chart [options]="multiSeriesChart" [styles]="{width: '100%', height:'360px'}"></canvasjs-chart>
+      <canvasjs-chart #chart1 [options]="multiSeriesChart" style="width: 100%; height: 360px; overflow: hidden;"></canvasjs-chart>
     </mat-card-content>
   </mat-card>
-  <mat-card appearance="outlined">
+    </div>
+    <div class="col-md-6">
+       <mat-card appearance="outlined">
     <mat-card-content>
-      <canvasjs-chart [options]="chartOptions" style="overflow: -webkit-paged-x;"></canvasjs-chart>
+      <canvasjs-chart #chart2 [options]="chartOptions" style="width: 100%; height: 360px; overflow: hidden;"></canvasjs-chart>
     </mat-card-content>
   </mat-card>
-
-
+    </div>
+  </div>
 </div>

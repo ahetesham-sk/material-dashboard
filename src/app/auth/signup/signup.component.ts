@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { MATERIAL_MODULES } from '../../shared/material/material';
 import { Form, FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { SnackbarService } from '../../core/services/snackbar.service';
 
 @Component({
   selector: 'app-signup',
@@ -13,7 +14,7 @@ import { CommonModule } from '@angular/common';
 export class SignupComponent implements OnInit {
   signUpFrm!: FormGroup;
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private snackBar:SnackbarService, private router:Router) {}
 
   ngOnInit(): void {
     this.initForm(); // Initialize the form on component load
@@ -37,6 +38,8 @@ export class SignupComponent implements OnInit {
   onSubmit() {
     if (this.signUpFrm.valid) {
       console.log(this.signUpFrm.value);
+      this.snackBar.showSuccess('User registered successfully!');
+      this.router.navigate(['/login']);
       // Perform signup logic here
     } else {
       console.log('Form is invalid');
