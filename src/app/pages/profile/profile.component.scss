@@ -2,6 +2,7 @@
   background: rgba(3, 169, 244, 0.1607843137);
   color: #2196f3;
   border: 0.5px solid #2196f3;
+  box-shadow: 0 12px 10px rgba(0, 0, 0, 0.1);
 }
 // .profile-img{
 //  background: #03a9f429;
@@ -17,7 +18,12 @@
   margin-right: 8px;
 }
 .social-icons{
-  display: flex;
+  // display: flex;
   flex-direction: row;
   gap: 10px;
+}
+mat-card:hover{
+  box-shadow: 0 12px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  border: 0.5px solid #2196f3;
 }
