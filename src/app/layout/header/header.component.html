@@ -15,17 +15,17 @@
     <mat-icon class="text-white">person_outline</mat-icon>
   </button> -->
 
-   <!-- Profile Image -->
+  <!-- Profile Image -->
   <button mat-button class="profile-button" [matMenuTriggerFor]="menu">
     <img src="/img/avatar.jpg" alt="Profile" class="profile-image" />
   </button>
 
   <mat-menu #menu="matMenu">
     <div class="user-name text-primary" mat-menu-item>
-    {{ userName }}
-  </div>
-  <mat-divider></mat-divider>
-  <button mat-menu-item><mat-icon>account_circle</mat-icon>Profile</button>
+      <mat-icon>person</mat-icon> {{ userName }}
+    </div>
+    <mat-divider></mat-divider>
+    <button mat-menu-item routerLink="/profile"><mat-icon>account_circle</mat-icon>Profile</button>
     <button mat-menu-item><mat-icon>settings</mat-icon>Settings</button>
     <button mat-menu-item><mat-icon>logout</mat-icon> Logout</button>
   </mat-menu>

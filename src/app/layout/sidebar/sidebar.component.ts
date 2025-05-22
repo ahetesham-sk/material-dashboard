@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MATERIAL_MODULES } from '../../shared/material/material';
 import {MatListModule} from '@angular/material/list';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { NgScrollbarModule } from 'ngx-scrollbar';
 
@@ -12,5 +12,10 @@ import { NgScrollbarModule } from 'ngx-scrollbar';
   styleUrl: './sidebar.component.scss'
 })
 export class SidebarComponent {
+  router = inject(Router);
 
+  logout(){
+    localStorage.removeItem('user');
+    this.router.navigate(['/login']);
+  }
 }

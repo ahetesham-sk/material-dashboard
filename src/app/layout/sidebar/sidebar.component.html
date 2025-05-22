@@ -35,8 +35,8 @@
         </div>
       </a>
 
-      <a mat-list-item routerLink="/login" routerLinkActive="active-link"
-        [routerLinkActiveOptions]="{ exact: true }">
+      <a mat-list-item routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{ exact: true }" (click)="logout()">
         <div class="menu-item">
           <mat-icon>logout</mat-icon>
         Logout

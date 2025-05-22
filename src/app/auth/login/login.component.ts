@@ -33,6 +33,7 @@ export class LoginComponent {
     // Simulate API call
     setTimeout(() => {
       this.isLoading = false;
+      localStorage.setItem('user', 'Ahetesham');
       this.router.navigate(['/dashboard']);
     }, 2000); // fake 2 seconds loading
   }

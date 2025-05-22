@@ -6,6 +6,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { UsersComponent } from './pages/users/users.component';
 import { UserFormComponent } from './components/users/user-form/user-form.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { authGuard } from './core/guards/auth.guard';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -15,7 +16,7 @@ export const routes: Routes = [
     path: '',
     component: MainLayoutComponent,
     children: [
-      { path: 'dashboard', component: DashboardComponent, title: 'Dashboard' },
+      { path: 'dashboard', component: DashboardComponent, title: 'Dashboard', canActivate: [authGuard] },
       { path: 'users', component: UsersComponent, title: 'Users' },
       { path: 'users/add', component: UserFormComponent },
       { path: 'users/edit/:id', component: UserFormComponent },
