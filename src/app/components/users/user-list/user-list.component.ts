@@ -96,4 +96,10 @@ export class UserListComponent {
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
   }
+
+  // Filter users based on input
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
 }

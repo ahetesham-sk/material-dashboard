@@ -13,7 +13,13 @@ import { RouterLink } from '@angular/router';
 export class HeaderComponent {
   @Output() toggleSidenav = new EventEmitter<void>();
   userName: string | null = null;
+  isDarkTheme = false;
   constructor() {
      this.userName = localStorage.getItem('user');
+  }
+
+  toggleTheme() {
+    this.isDarkTheme = !this.isDarkTheme;
+    //document.body.classList.toggle('dark-theme', this.isDarkTheme);
   }
 }
